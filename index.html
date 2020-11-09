@@ -21,18 +21,13 @@
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
 
     .container-fluid {
-        max-width: 730px;
-    }
-
-    .section-body {
-    	padding-left: 6%;
+        max-width: 768px;
     }
 
     /* Add margin for static header */
     body {
         margin-top: 56px;
     }
-
 
     /* Anchor offset with static header */
     *[id]:before { 
@@ -43,14 +38,14 @@
         visibility: hidden; 
     }
 
-    .section-body a {
-    	color: inherit;
+    section a {
+        color: inherit;
     }
-    .section-body a:hover {
-    	color: #0056b3;
+    section a:hover {
+        color: #0056b3;
     }
 
-    .section-body a:after {
+    section a:after {
         display: inline-block;
         content: "";
         background-size: .8rem .8rem; /* bepaalt de grootte van de icon */
@@ -66,12 +61,17 @@
     }
 
     .job-entry.highlight {
-    	background-color: #f8f9fa;
-    	border-left: 1px solid #0056b3;
-    	margin-left: -6%;
-    	padding-left: 6%;
-    	margin-right: -15px;  
-        	padding-right: 15px;
+        background-color: #f8f9fa;
+        border-left: 1px solid #0056b3;
+        margin-right: -15px;  
+        padding-right: 15px;
+    }
+
+    @media screen and (max-width: 768px){
+      .job-entry.highlight {
+          margin-left: -15px;
+          padding-left: 14px;
+      }
     }
 
     .job-entry ul {
@@ -87,6 +87,10 @@
     }
     .job-entry li:last-child {
         border-bottom-width: 0;
+        padding-bottom: 0;
+    }
+    .job-entry li:first-child {
+        padding-top: 0;
     }
 
     h1 {
@@ -99,6 +103,8 @@
 
     h2 {
         margin-bottom: 1rem;
+        margin-top: 1rem;
+        color: #014792;
     }
 
     h4 {
@@ -149,456 +155,546 @@
 
 <section id="education">
   <h2>Education</h2>
-  <div class="section-body">
-        <div class="job-entry ">
+
+      <div class="job-entry ">
       <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">2016–now</h5></div>
-        <div class="col-md-9"><h3>Doctoral Student, Computer Science</h3></div>
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">2016–now</h5></div>
+        <div class="col-md-8"><h3>Doctoral Student, Computer Science</h3></div>
       </div>
       <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted"><a href="https://quics.umd.edu/">QuICS</a></h4></div>
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted"><a href="https://quics.umd.edu/">QuICS</a></h4></div>
       </div>
             <div class="row">
-        <div class="offset-md-3 col-md-9">
-          <p class="small">Joint Center for Quantum Information and Computer Science, University of Maryland, College Park, USA</p>
+        <div class="offset-md-4 col-md-8"><p class="small">Joint Center for Quantum Information and Computer Science, University of Maryland, College Park, USA</p></div>
+      </div>
+                  <div class="row">
+        <div class="offset-md-1 col-md-11">
+          <ul>
+          <li>Thesis topic: Transforming quantum circuits for quantum architectures with limited connectivity. Identified qubit routing, i.e., implementing permutations of qubits as an interesting subproblem and we are currently exploring this research direction under supervision of Andrew Childs.</li>
+          <li>Co-supervised undergraduate students Sam King and Hrishee Shahstri during and after a NSF research experience for undergraduates (REU) program. A paper is in preparation.</li>
+          <li>Informally co-supervised Cem Unsal during the “Circuit Transformations for Quantum Architecture” project.</li>
+          <li>Worked on quantum algorithms and quantum cryptography under supervision of Yi-Kai Liu.</li>
+          </ul>
         </div>
       </div>
-      
-            <ul>
-            <li>Thesis topic: Transforming quantum circuits for quantum architectures with limited connectivity. Identified qubit routing, i.e., implementing permutations of qubits as an interesting subproblem and we are currently exploring this research direction under supervision of Andrew Childs.</li>
-            <li>Co-supervised undergraduate students Sam King and Hrishee Shahstri during and after a NSF research experience for undergraduates (REU) program. A paper is in preparation.</li>
-            <li>Informally co-supervised Cem Unsal during the “Circuit Transformations for Quantum Architecture” project.</li>
-            <li>Worked on quantum algorithms and quantum cryptography under supervision of Yi-Kai Liu.</li>
-            </ul>
           </div>
-        <div class="job-entry ">
+      <div class="job-entry ">
       <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">2013–2015</h5></div>
-        <div class="col-md-9"><h3>Master of Science, Computer Science</h3></div>
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">2013–2015</h5></div>
+        <div class="col-md-8"><h3>Master of Science, Computer Science</h3></div>
       </div>
       <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted"><a href="https://www.tudelft.nl">TU Delft</a></h4></div>
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted"><a href="https://www.tudelft.nl">TU Delft</a></h4></div>
       </div>
             <div class="row">
-        <div class="offset-md-3 col-md-9">
-          <p class="small">Delft, The Netherlands</p>
+        <div class="offset-md-4 col-md-8"><p class="small">Delft, The Netherlands</p></div>
+      </div>
+                  <div class="row">
+        <div class="offset-md-1 col-md-11">
+          <p>Specialization <em>Software Technology</em>, with a focus on (distributed) algorithms and networks. Master’s thesis on routing for quantum networks. Awarded “cum laude” (&lt;5% of students).</p>
         </div>
       </div>
-      
-            <p>Specialization <em>Software Technology</em>, with a focus on (distributed) algorithms and networks. Master’s thesis on routing for quantum networks. Awarded “cum laude” (&lt;5% of students).</p>
           </div>
-        <div class="job-entry ">
+      <div class="job-entry ">
       <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">2013–2015</h5></div>
-        <div class="col-md-9"><h3>Master of Science, Embedded Systems</h3></div>
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">2013–2015</h5></div>
+        <div class="col-md-8"><h3>Master of Science, Embedded Systems</h3></div>
       </div>
       <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted"><a href="https://www.tudelft.nl">TU Delft</a></h4></div>
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted"><a href="https://www.tudelft.nl">TU Delft</a></h4></div>
       </div>
             <div class="row">
-        <div class="offset-md-3 col-md-9">
-          <p class="small">Delft, The Netherlands</p>
+        <div class="offset-md-4 col-md-8"><p class="small">Delft, The Netherlands</p></div>
+      </div>
+                  <div class="row">
+        <div class="offset-md-1 col-md-11">
+          <p>I constructed a proof of concept fiber-optic cable tap for less than €30. I also worked on software acceleration using vectorization (SSE), parallelization (Pthreads, OpenMP), GPGPU programming (CUDA), and DSPs. Awarded “cum laude”.</p>
         </div>
       </div>
-      
-            <p>I constructed a proof of concept fiber-optic cable tap for less than €30. I also worked on software acceleration using vectorization (SSE), parallelization (Pthreads, OpenMP), GPGPU programming (CUDA), and DSPs. Awarded “cum laude”.</p>
           </div>
-        <div class="job-entry ">
+      <div class="job-entry ">
       <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">2013–2015</h5></div>
-        <div class="col-md-9"><h3>Bachelor of Science, Computer Science</h3></div>
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">2013–2015</h5></div>
+        <div class="col-md-8"><h3>Bachelor of Science, Computer Science</h3></div>
       </div>
       <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted"><a href="https://www.tudelft.nl">TU Delft</a></h4></div>
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted"><a href="https://www.tudelft.nl">TU Delft</a></h4></div>
       </div>
             <div class="row">
-        <div class="offset-md-3 col-md-9">
-          <p class="small">Delft, The Netherlands</p>
+        <div class="offset-md-4 col-md-8"><p class="small">Delft, The Netherlands</p></div>
+      </div>
+                  <div class="row">
+        <div class="offset-md-1 col-md-11">
+          <p>Awarded “cum laude”.</p>
         </div>
       </div>
-      
-            <p>Awarded “cum laude”.</p>
           </div>
-        <div class="job-entry ">
+      <div class="job-entry ">
       <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">2013–2015</h5></div>
-        <div class="col-md-9"><h3>Bachelor of Science, Electrical Engineering</h3></div>
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">2013–2015</h5></div>
+        <div class="col-md-8"><h3>Bachelor of Science, Electrical Engineering</h3></div>
       </div>
       <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted"><a href="https://www.tudelft.nl">TU Delft</a></h4></div>
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted"><a href="https://www.tudelft.nl">TU Delft</a></h4></div>
       </div>
             <div class="row">
-        <div class="offset-md-3 col-md-9">
-          <p class="small">Delft, The Netherlands</p>
+        <div class="offset-md-4 col-md-8"><p class="small">Delft, The Netherlands</p></div>
+      </div>
+                  <div class="row">
+        <div class="offset-md-1 col-md-11">
+          <p>Awarded “cum laude”.</p>
         </div>
       </div>
-      
-            <p>Awarded “cum laude”.</p>
           </div>
-      </div>
+  
 </section>
 
 <section id="experience">
   <h2>Experience</h2>
-  <div class="section-body">
+
       <div class="job-entry highlight">
       <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">2020</h5></div>
-        <div class="col-md-9"><h3>Research Summer Internship</h3></div>
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">2020</h5></div>
+        <div class="col-md-8"><h3>Research Summer Internship</h3></div>
       </div>
       <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted"><a href="https://www.microsoft.com">Microsoft Research</a></h4></div>
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted"><a href="https://www.microsoft.com">Microsoft Research</a></h4></div>
       </div>
             <div class="row">
-        <div class="offset-md-3 col-md-9"><p class="small">Redmond (virtual), WA, USA</p></div>
+        <div class="offset-md-4 col-md-8"><p class="small">Redmond (virtual), WA, USA</p></div>
       </div>
-      
-            <p>Researched algorithms for executing circuits on quantum hardware. Used native operations to better use the hardware capabilities. Implemented proof of concept in Julia language that shows a 5x speed-up over state-of-the-art. Work performed with Vadym Kliuchnikov, Alexander Vaschillo, and Dmitry Vasilevsky.</p>
+                  <div class="row">
+        <div class="offset-md-1 col-md-11">
+          <p>Researched algorithms for executing circuits on quantum hardware. Used native operations to better use the hardware capabilities. Implemented proof of concept in Julia language that shows a 5x speed-up over state-of-the-art. Work performed with Vadym Kliuchnikov, Alexander Vaschillo, and Dmitry Vasilevsky.</p>
+        </div>
+      </div>
           </div>
       <div class="job-entry highlight">
       <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">2019</h5></div>
-        <div class="col-md-9"><h3>Summer Intern</h3></div>
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">2019</h5></div>
+        <div class="col-md-8"><h3>Summer Intern</h3></div>
       </div>
       <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted"><a href="https://www.ibm.com">IBM</a></h4></div>
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted"><a href="https://www.ibm.com">IBM</a></h4></div>
       </div>
             <div class="row">
-        <div class="offset-md-3 col-md-9"><p class="small">Yorktown Heights, NY, USA</p></div>
+        <div class="offset-md-4 col-md-8"><p class="small">Yorktown Heights, NY, USA</p></div>
       </div>
-      
-            <p>Researched algorithms for quantum chemistry and contributed to Qiskit development under the supervision of Ali Javadi-Abhari.</p>
+                  <div class="row">
+        <div class="offset-md-1 col-md-11">
+          <p>Researched algorithms for quantum chemistry and contributed to Qiskit development under the supervision of Ali Javadi-Abhari.</p>
+        </div>
+      </div>
           </div>
       <div class="job-entry ">
       <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">2016</h5></div>
-        <div class="col-md-9"><h3>Developer</h3></div>
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">2016</h5></div>
+        <div class="col-md-8"><h3>Developer</h3></div>
       </div>
       <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted"><a href="https://www.owlin.com/">Owlin</a></h4></div>
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted"><a href="https://www.owlin.com/">Owlin</a></h4></div>
       </div>
             <div class="row">
-        <div class="offset-md-3 col-md-9"><p class="small">Amsterdam, The Netherlands</p></div>
+        <div class="offset-md-4 col-md-8"><p class="small">Amsterdam, The Netherlands</p></div>
       </div>
-      
-            <p>Developed and deployed 7 APIs in 3 months using Node.js, RethinkDB and ElasticSearch. Provided interactive website interface and documentation for the APIs using OpenAPI.</p>
+                  <div class="row">
+        <div class="offset-md-1 col-md-11">
+          <p>Developed and deployed 7 APIs in 3 months using Node.js, RethinkDB and ElasticSearch. Provided interactive website interface and documentation for the APIs using OpenAPI.</p>
+        </div>
+      </div>
           </div>
       <div class="job-entry ">
       <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">2015</h5></div>
-        <div class="col-md-9"><h3>Scientist</h3></div>
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">2015</h5></div>
+        <div class="col-md-8"><h3>Scientist</h3></div>
       </div>
       <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted"><a href="https://qutech.nl/">QuTech</a></h4></div>
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted"><a href="https://qutech.nl/">QuTech</a></h4></div>
       </div>
             <div class="row">
-        <div class="offset-md-3 col-md-9"><p class="small">Delft, The Netherlands</p></div>
+        <div class="offset-md-4 col-md-8"><p class="small">Delft, The Netherlands</p></div>
       </div>
-      
-            <p>Worked with Stephanie Wehner to publish my thesis work as paper. Programmed and performed simulations in Scala on a multi-core server. Simulations code: <a href="https://github.com/eddieschoute/spherical-routing" class="uri">https://github.com/eddieschoute/spherical-routing</a></p>
+                  <div class="row">
+        <div class="offset-md-1 col-md-11">
+          <p>Worked with Stephanie Wehner to publish my thesis work as paper. Programmed and performed simulations in Scala on a multi-core server. Simulations code: <a href="https://github.com/eddieschoute/spherical-routing" class="uri">https://github.com/eddieschoute/spherical-routing</a></p>
+        </div>
+      </div>
           </div>
       <div class="job-entry ">
       <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">2013</h5></div>
-        <div class="col-md-9"><h3>Intern</h3></div>
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">2013</h5></div>
+        <div class="col-md-8"><h3>Intern</h3></div>
       </div>
       <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted"><a href="https://waag.org">Waag</a></h4></div>
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted"><a href="https://waag.org">Waag</a></h4></div>
       </div>
             <div class="row">
-        <div class="offset-md-3 col-md-9"><p class="small">Amsterdam, The Netherlands</p></div>
+        <div class="offset-md-4 col-md-8"><p class="small">Amsterdam, The Netherlands</p></div>
       </div>
-      
-            <p>Constructed a recommender system for arts tourism in the Netherlands using a semantic database.</p>
+                  <div class="row">
+        <div class="offset-md-1 col-md-11">
+          <p>Constructed a recommender system for arts tourism in the Netherlands using a semantic database.</p>
+        </div>
+      </div>
           </div>
       <div class="job-entry ">
       <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">2012–2015</h5></div>
-        <div class="col-md-9"><h3>Teaching Assistant</h3></div>
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">2012–2015</h5></div>
+        <div class="col-md-8"><h3>Teaching Assistant</h3></div>
       </div>
       <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted"><a href="https://www.tudelft.nl">TU Delft</a></h4></div>
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted"><a href="https://www.tudelft.nl">TU Delft</a></h4></div>
       </div>
             <div class="row">
-        <div class="offset-md-3 col-md-9"><p class="small">Delft, The Netherlands</p></div>
+        <div class="offset-md-4 col-md-8"><p class="small">Delft, The Netherlands</p></div>
       </div>
-      
-            <ul>
-            <li>Assisted and graded one year of masters students in the fourth year Advanced Algorithms course.</li>
-            <li>Assisted and graded two years of bachelors students in the second year Algorithms course.</li>
-            </ul>
+                  <div class="row">
+        <div class="offset-md-1 col-md-11">
+          <ul>
+          <li>Assisted and graded one year of masters students in the fourth year Advanced Algorithms course.</li>
+          <li>Assisted and graded two years of bachelors students in the second year Algorithms course.</li>
+          </ul>
+        </div>
+      </div>
           </div>
-    </div>
+  
 </section>
 
 <section id="service">
   <h2>Service</h2>
-  <div class="section-body">
+
       <div class="job-entry ">
       <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">2018–present</h5></div>
-        <div class="col-md-9"><h3>Computer Science Graduate Student Council</h3></div>
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">2018–present</h5></div>
+        <div class="col-md-8"><h3>Computer Science Graduate Student Council</h3></div>
       </div>
             <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted"><a href="https://www.cs.umd.edu/">Computer Science Department</a></h4></div>
-      </div>
-                  <p>Member (2018–2019) and president in 2020. Organized and contributed to the annual CS department picnic. Organized student trips and events to foster a community withing the department.</p>
-    </div>
-      <div class="job-entry ">
-      <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">2018–2020</h5></div>
-        <div class="col-md-9"><h3>Organize Seminar Recordings and Youtube.</h3></div>
-      </div>
-            <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted"><a href="https://quics.umd.edu/">QuICS</a></h4></div>
-      </div>
-                  <p>Organized videotaping and processing of QuICS seminars for upload to the <a href="https://www.youtube.com/c/QuICS">QuICS Youtube</a>, to promote accessibility of research.</p>
-    </div>
-      <div class="job-entry ">
-      <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">2019–present</h5></div>
-        <div class="col-md-9"><h3>Assist with Organizing QuICS-JQI-CMTC Seminars</h3></div>
-      </div>
-            <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted"><a href="https://quics.umd.edu/">QuICS</a></h4></div>
-      </div>
-                  <p>This weekly seminar series encourages the transfer of knowledge across the field of physics, computer science and math. I also made sure healthier food was available.</p>
-    </div>
-      <div class="job-entry ">
-      <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">2019</h5></div>
-        <div class="col-md-9"><h3>Live Stream and Video Recording</h3></div>
-      </div>
-            <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted"><a href="https://www.tqcconference.org/">TQC 2019 and NISQ workshop</a></h4></div>
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted"><a href="https://www.cs.umd.edu/">Computer Science Department</a></h4></div>
       </div>
                   <div class="row">
-        <div class="offset-md-3 col-md-9"><p class="small">14th Conference on the Theory of Quantum Compilation, Communication and Cryptography</p></div>
+        <div class="offset-md-1 col-md-11">
+          <p>Member (2018–2019) and president in 2020. Organized and contributed to the annual CS department picnic. Organized student trips and events to foster a community withing the department.</p>
+        </div>
       </div>
-            <p>Helped with finding the appropriate hardware and assisted with the live streaming of TQC and NISQ workshop.</p>
     </div>
+      <div class="job-entry ">
+      <div class="row">
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">2018–2020</h5></div>
+        <div class="col-md-8"><h3>Organize Seminar Recordings and Youtube.</h3></div>
+      </div>
+            <div class="row">
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted"><a href="https://quics.umd.edu/">QuICS</a></h4></div>
+      </div>
+                  <div class="row">
+        <div class="offset-md-1 col-md-11">
+          <p>Organized videotaping and processing of QuICS seminars for upload to the <a href="https://www.youtube.com/c/QuICS">QuICS Youtube</a>, to promote accessibility of research.</p>
+        </div>
+      </div>
     </div>
+      <div class="job-entry ">
+      <div class="row">
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">2019–present</h5></div>
+        <div class="col-md-8"><h3>Assist with Organizing QuICS-JQI-CMTC Seminars</h3></div>
+      </div>
+            <div class="row">
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted"><a href="https://quics.umd.edu/">QuICS</a></h4></div>
+      </div>
+                  <div class="row">
+        <div class="offset-md-1 col-md-11">
+          <p>This weekly seminar series encourages the transfer of knowledge across the field of physics, computer science and math. I also made sure healthier food was available.</p>
+        </div>
+      </div>
+    </div>
+      <div class="job-entry ">
+      <div class="row">
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">2019</h5></div>
+        <div class="col-md-8"><h3>Live Stream and Video Recording</h3></div>
+      </div>
+            <div class="row">
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted"><a href="https://www.tqcconference.org/">TQC 2019 and NISQ workshop</a></h4></div>
+      </div>
+                  <div class="row">
+        <div class="offset-md-4 col-md-8"><p class="small">14th Conference on the Theory of Quantum Compilation, Communication and Cryptography</p></div>
+      </div>
+            <div class="row">
+        <div class="offset-md-1 col-md-11">
+          <p>Helped with finding the appropriate hardware and assisted with the live streaming of TQC and NISQ workshop.</p>
+        </div>
+      </div>
+    </div>
+  
 </section>
 
 <section id="awards">
   <h2>Awards</h2>
-  <div class="section-body">
+
       <div class="job-entry highlight">
       <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">2020–2022</h5></div>
-        <div class="col-md-9"><h3>IBM PhD Fellowship</h3></div>
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">2020–2022</h5></div>
+        <div class="col-md-8"><h3>IBM PhD Fellowship</h3></div>
       </div>
             <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted"><a href="https://www.ibm.com">IBM</a></h4></div>
-      </div>
-                  <p>A stipend of $35,000/yr. plus $25,000 towards education expenses in the first year.</p>
-    </div>
-      <div class="job-entry ">
-      <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">2018</h5></div>
-        <div class="col-md-9"><h3>Tied 2nd Place IBM Developer challenge</h3></div>
-      </div>
-            <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted"><a href="https://www.ibm.com">IBM</a></h4></div>
-      </div>
-                  <p>A $1000 prize for developing software with IBM’s Qiskit to compile quantum circuits for the IBM quantum computer architectures.</p>
-    </div>
-      <div class="job-entry ">
-      <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">2016–2018</h5></div>
-        <div class="col-md-9"><h3>Lanczos Graduate Fellowship</h3></div>
-      </div>
-            <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted"><a href="https://quics.umd.edu">QuICS</a></h4></div>
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted"><a href="https://www.ibm.com">IBM</a></h4></div>
       </div>
                   <div class="row">
-        <div class="offset-md-3 col-md-9"><p class="small">Joint Center for Quantum Information and Computer Science, College Park, MD</p></div>
+        <div class="offset-md-1 col-md-11">
+          <p>A stipend of $35,000/yr. plus $25,000 towards education expenses in the first year.</p>
+        </div>
       </div>
-            <p>Covers tuition, stipend and an additional $5000/yr. Three fellowships were awarded.</p>
     </div>
       <div class="job-entry ">
       <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">2016–2018</h5></div>
-        <div class="col-md-9"><h3>Dean’s Graduate Fellowship</h3></div>
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">2018</h5></div>
+        <div class="col-md-8"><h3>Tied 2nd Place IBM Developer challenge</h3></div>
       </div>
             <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted"><a href="https://gradschool.umd.edu/">The Graduate School</a></h4></div>
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted"><a href="https://www.ibm.com">IBM</a></h4></div>
       </div>
                   <div class="row">
-        <div class="offset-md-3 col-md-9"><p class="small">University of Maryland, College Park</p></div>
+        <div class="offset-md-1 col-md-11">
+          <p>A $1000 prize for developing software with IBM’s Qiskit to compile quantum circuits for the IBM quantum computer architectures.</p>
+        </div>
       </div>
-            <p>An award of $2500 yearly.</p>
     </div>
       <div class="job-entry ">
       <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">2017</h5></div>
-        <div class="col-md-9"><h3>Jacob K. Goldhauber Travel Award</h3></div>
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">2016–2018</h5></div>
+        <div class="col-md-8"><h3>Lanczos Graduate Fellowship</h3></div>
       </div>
             <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted"><a href="https://gradschool.umd.edu">The Graduate School, University of Maryland, College Park</a></h4></div>
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted"><a href="https://quics.umd.edu">QuICS</a></h4></div>
       </div>
                   <div class="row">
-        <div class="offset-md-3 col-md-9"><p class="small">University of Maryland, College Park</p></div>
+        <div class="offset-md-4 col-md-8"><p class="small">Joint Center for Quantum Information and Computer Science, College Park, MD</p></div>
       </div>
-            <p>Covers $500 for travel to a conference.</p>
+            <div class="row">
+        <div class="offset-md-1 col-md-11">
+          <p>Covers tuition, stipend and an additional $5000/yr. Three fellowships were awarded.</p>
+        </div>
+      </div>
     </div>
+      <div class="job-entry ">
+      <div class="row">
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">2016–2018</h5></div>
+        <div class="col-md-8"><h3>Dean’s Graduate Fellowship</h3></div>
+      </div>
+            <div class="row">
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted"><a href="https://gradschool.umd.edu/">The Graduate School</a></h4></div>
+      </div>
+                  <div class="row">
+        <div class="offset-md-4 col-md-8"><p class="small">University of Maryland, College Park</p></div>
+      </div>
+            <div class="row">
+        <div class="offset-md-1 col-md-11">
+          <p>An award of $2500 yearly.</p>
+        </div>
+      </div>
     </div>
+      <div class="job-entry ">
+      <div class="row">
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">2017</h5></div>
+        <div class="col-md-8"><h3>Jacob K. Goldhauber Travel Award</h3></div>
+      </div>
+            <div class="row">
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted"><a href="https://gradschool.umd.edu">The Graduate School, University of Maryland, College Park</a></h4></div>
+      </div>
+                  <div class="row">
+        <div class="offset-md-4 col-md-8"><p class="small">University of Maryland, College Park</p></div>
+      </div>
+            <div class="row">
+        <div class="offset-md-1 col-md-11">
+          <p>Covers $500 for travel to a conference.</p>
+        </div>
+      </div>
+    </div>
+  
 </section>
 
 <section id="talks">
   <h2>Talks</h2>
-  <div class="section-body">
-      <div class="job-entry ">
-      <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">2019</h5></div>
-        <div class="col-md-9"><h3>Circuit Transformations for Quantum Architectures</h3></div>
-      </div>
-      <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted"><a href="https://www.tqcconference.org/">TQC 2019</a></h4></div>
-      </div>
-            <div class="row">
-        <div class="offset-md-3 col-md-9"><p class="small"><a href="https://www.youtube.com/watch?v=h7vc5lELd3E">https://www.youtube.com/watch?v=h7vc5lELd3E</a></p></div>
-      </div>
-            
-    </div>
-      <div class="job-entry ">
-      <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">2019</h5></div>
-        <div class="col-md-9"><h3>Circuit Transformations for Quantum Architectures</h3></div>
-      </div>
-      <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted">Qiskit Camp</h4></div>
-      </div>
-            <div class="row">
-        <div class="offset-md-3 col-md-9"><p class="small"><a href="https://www.youtube.com/watch?v=Raw6AYil79Q">https://www.youtube.com/watch?v=Raw6AYil79Q</a></p></div>
-      </div>
-            
-    </div>
-    </div>
-</section>
 
+      <div class="job-entry ">
+      <div class="row">
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">2019</h5></div>
+        <div class="col-md-8"><h3>Circuit Transformations for Quantum Architectures</h3></div>
+      </div>
+      <div class="row">
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted"><a href="https://www.tqcconference.org/">TQC 2019</a></h4></div>
+      </div>
+            <div class="row">
+        <div class="offset-md-4 col-md-8"><p class="small"><a href="https://www.youtube.com/watch?v=h7vc5lELd3E">https://www.youtube.com/watch?v=h7vc5lELd3E</a></p></div>
+      </div>
+            <div class="row">
+        <div class="offset-md-1 col-md-11">
+          
+        </div>
+      </div>
+    </div>
+      <div class="job-entry ">
+      <div class="row">
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">2019</h5></div>
+        <div class="col-md-8"><h3>Circuit Transformations for Quantum Architectures</h3></div>
+      </div>
+      <div class="row">
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted">Qiskit Camp</h4></div>
+      </div>
+            <div class="row">
+        <div class="offset-md-4 col-md-8"><p class="small"><a href="https://www.youtube.com/watch?v=Raw6AYil79Q">https://www.youtube.com/watch?v=Raw6AYil79Q</a></p></div>
+      </div>
+            <div class="row">
+        <div class="offset-md-1 col-md-11">
+          
+        </div>
+      </div>
+    </div>
+  
+</section>
 
 <section id="publications">
   <h2>Publications</h2>
-  <div class="section-body">
+
       <div class="job-entry ">
       <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">
                     in preparation
                   </h5></div>
-        <div class="col-md-9"><h3>Quantum Qubit Routing
-        </h3></div>
+        <div class="col-md-8"><h3>Quantum Qubit Routing</h3></div>
       </div>
       <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted">Aniruddha Bapat, Alexey V. Gorshkov, Andrew M. Childs, and Eddie Schoute</h4></div>
-      </div>
-            <p>Qubit routing work in preparation.</p>
-    </div>
-      <div class="job-entry ">
-      <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">
-                    in preparation
-                  </h5></div>
-        <div class="col-md-9"><h3>Sorting by Reversals
-        </h3></div>
-      </div>
-      <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted">Sam King, Hrishee Shashtri, Aniruddha Bapat, Eddie Schoute, Alexey V. Gorshkov, and Andrew M. Childs</h4></div>
-      </div>
-            <p>NSF research for undergraduates (REU) work that I co-supervised.</p>
-    </div>
-      <div class="job-entry ">
-      <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">
-                    in preparation
-                  </h5></div>
-        <div class="col-md-9"><h3>Untitled
-        </h3></div>
-      </div>
-      <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted">Vadym Kliuchnikov, Eddie Schoute, and co-authors</h4></div>
-      </div>
-            <p>Work stemming from a research internship at Microsoft Research.</p>
-    </div>
-      <div class="job-entry ">
-      <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">
-                    2020
-                  </h5></div>
-        <div class="col-md-9"><h3>Nearly optimal time-independent state reversal of a spin chain
-        </h3></div>
-      </div>
-      <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted">Aniruddha Bapat, Eddie Schoute, Alexey V. Gorshkov, and Andrew M. Childs</h4></div>
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted">Aniruddha Bapat, Alexey V. Gorshkov, Andrew M. Childs, and Eddie Schoute</h4></div>
       </div>
             <div class="row">
-        <div class="offset-md-3 col-md-9"><p class="small"><a href="https://arxiv.org/abs/2003.02843">https://arxiv.org/abs/2003.02843</a></p></div>
+        <div class="offset-md-1 col-md-11">
+          <p>Qubit routing work in preparation.</p>
+        </div>
       </div>
-            <p>We propose a time-independent Hamiltonian protocol for the reversal of qubit ordering in a chain of N spins. Our protocol has an easily implementable nearest-neighbor, transverse-field Ising model Hamiltonian with time-independent, non-uniform couplings. Under appropriate normalization, we implement this state reversal three times faster than a naive approach using SWAP gates, in time comparable to a protocol of Raussendorf [Phys. Rev. A 72, 052301 (2005)] that requires dynamical control. We also prove lower bounds on state reversal by using results on the entanglement capacity of Hamiltonians and show that we are within a factor 1.502(1+1/N) of the shortest time possible. Our lower bound holds for all nearest-neighbor qubit protocols with arbitrary finite ancilla spaces and local operations and classical communication. Finally, we extend our protocol to an infinite family of nearest-neighbor, time-independent Hamiltonian protocols for state reversal. This includes chains with nearly uniform coupling that may be especially feasible for experimental implementation.</p>
+    </div>
+      <div class="job-entry ">
+      <div class="row">
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">
+                    in preparation
+                  </h5></div>
+        <div class="col-md-8"><h3>Sorting by Reversals</h3></div>
+      </div>
+      <div class="row">
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted">Sam King, Hrishee Shashtri, Aniruddha Bapat, Eddie Schoute, Alexey V. Gorshkov, and Andrew M. Childs</h4></div>
+      </div>
+            <div class="row">
+        <div class="offset-md-1 col-md-11">
+          <p>NSF research for undergraduates (REU) work that I co-supervised.</p>
+        </div>
+      </div>
+    </div>
+      <div class="job-entry ">
+      <div class="row">
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">
+                    in preparation
+                  </h5></div>
+        <div class="col-md-8"><h3>Untitled</h3></div>
+      </div>
+      <div class="row">
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted">Vadym Kliuchnikov, Eddie Schoute, and co-authors</h4></div>
+      </div>
+            <div class="row">
+        <div class="offset-md-1 col-md-11">
+          <p>Work stemming from a research internship at Microsoft Research.</p>
+        </div>
+      </div>
+    </div>
+      <div class="job-entry ">
+      <div class="row">
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">
+                    2020
+                  </h5></div>
+        <div class="col-md-8"><h3>Nearly optimal time-independent state reversal of a spin chain</h3></div>
+      </div>
+      <div class="row">
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted">Aniruddha Bapat, Eddie Schoute, Alexey V. Gorshkov, and Andrew M. Childs</h4></div>
+      </div>
+            <div class="row">
+        <div class="offset-md-4 col-md-8"><p class="small"><a href="https://arxiv.org/abs/2003.02843">https://arxiv.org/abs/2003.02843</a></p></div>
+      </div>
+            <div class="row">
+        <div class="offset-md-1 col-md-11">
+          <p>We propose a time-independent Hamiltonian protocol for the reversal of qubit ordering in a chain of N spins. Our protocol has an easily implementable nearest-neighbor, transverse-field Ising model Hamiltonian with time-independent, non-uniform couplings. Under appropriate normalization, we implement this state reversal three times faster than a naive approach using SWAP gates, in time comparable to a protocol of Raussendorf [Phys. Rev. A 72, 052301 (2005)] that requires dynamical control. We also prove lower bounds on state reversal by using results on the entanglement capacity of Hamiltonians and show that we are within a factor 1.502(1+1/N) of the shortest time possible. Our lower bound holds for all nearest-neighbor qubit protocols with arbitrary finite ancilla spaces and local operations and classical communication. Finally, we extend our protocol to an infinite family of nearest-neighbor, time-independent Hamiltonian protocols for state reversal. This includes chains with nearly uniform coupling that may be especially feasible for experimental implementation.</p>
+        </div>
+      </div>
     </div>
       <div class="job-entry highlight">
       <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">
                     2019
                   </h5></div>
-        <div class="col-md-9"><h3>Circuit Transformations for Quantum Architectures
-        </h3></div>
+        <div class="col-md-8"><h3>Circuit Transformations for Quantum Architectures</h3></div>
       </div>
       <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted">Andrew M. Childs, Eddie Schoute, and Cem M. Unsal</h4></div>
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted">Andrew M. Childs, Eddie Schoute, and Cem M. Unsal</h4></div>
       </div>
             <div class="row">
-        <div class="offset-md-3 col-md-9"><p class="small"><a href="https://www.doi.org/10.4230/LIPIcs.TQC.2019.3">https://www.doi.org/10.4230/LIPIcs.TQC.2019.3</a></p></div>
+        <div class="offset-md-4 col-md-8"><p class="small"><a href="https://www.doi.org/10.4230/LIPIcs.TQC.2019.3">https://www.doi.org/10.4230/LIPIcs.TQC.2019.3</a></p></div>
       </div>
-            <p>Quantum computer architectures impose restrictions on qubit interactions. We propose efficient circuit transformations that modify a given quantum circuit to fit an architecture, allowing for any initial and final mapping of circuit qubits to architecture qubits. To achieve this, we first consider the qubit movement subproblem and use the routing via matchings framework to prove tighter bounds on parallel routing. In practice, we only need to perform partial permutations, so we generalize routing via matchings to that setting. We give new routing procedures for common architecture graphs and for the generalized hierarchical product of graphs, which produces subgraphs of the Cartesian product. Secondly, for serial routing, we consider the token swapping framework and extend a 4-approximation algorithm for general graphs to support partial permutations. We apply these routing procedures to give several circuit transformations, using various heuristic qubit placement subroutines. We implement these transformations in software and compare their performance for large quantum circuits on grid and modular architectures, identifying strategies that work well in practice.</p>
+            <div class="row">
+        <div class="offset-md-1 col-md-11">
+          <p>Quantum computer architectures impose restrictions on qubit interactions. We propose efficient circuit transformations that modify a given quantum circuit to fit an architecture, allowing for any initial and final mapping of circuit qubits to architecture qubits. To achieve this, we first consider the qubit movement subproblem and use the routing via matchings framework to prove tighter bounds on parallel routing. In practice, we only need to perform partial permutations, so we generalize routing via matchings to that setting. We give new routing procedures for common architecture graphs and for the generalized hierarchical product of graphs, which produces subgraphs of the Cartesian product. Secondly, for serial routing, we consider the token swapping framework and extend a 4-approximation algorithm for general graphs to support partial permutations. We apply these routing procedures to give several circuit transformations, using various heuristic qubit placement subroutines. We implement these transformations in software and compare their performance for large quantum circuits on grid and modular architectures, identifying strategies that work well in practice.</p>
+        </div>
+      </div>
     </div>
       <div class="job-entry ">
       <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">
                     2016
                   </h5></div>
-        <div class="col-md-9"><h3>Shortcuts to quantum network routing
-        </h3></div>
+        <div class="col-md-8"><h3>Shortcuts to quantum network routing</h3></div>
       </div>
       <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted">E. Schoute, L. Mančinska, T. Islam, I. Kerenidis, and S. Wehner</h4></div>
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted">E. Schoute, L. Mančinska, T. Islam, I. Kerenidis, and S. Wehner</h4></div>
       </div>
             <div class="row">
-        <div class="offset-md-3 col-md-9"><p class="small"><a href="https://arxiv.org/abs/1610.05238">https://arxiv.org/abs/1610.05238</a></p></div>
+        <div class="offset-md-4 col-md-8"><p class="small"><a href="https://arxiv.org/abs/1610.05238">https://arxiv.org/abs/1610.05238</a></p></div>
       </div>
-            <p>A quantum network promises to enable long distance quantum communication, and assemble small quantum devices into a large quantum computing cluster. Each network node can thereby be seen as a small few qubit quantum computer. Qubits can be sent over direct physical links connecting nearby quantum nodes, or by means of teleportation over pre-established entanglement amongst distant network nodes. Such pre-shared entanglement effectively forms a shortcut - a virtual quantum link - which can be used exactly once.</p>
-            <p>Here, we present an abstraction of a quantum network that allows ideas from computer science to be applied to the problem of routing qubits, and manage entanglement in the network. Specifically, we consider a scenario in which each quantum network node can create EPR pairs with its immediate neighbours over a physical connection, and perform entanglement swapping operations in order to create long distance virtual quantum links. We proceed to discuss the features unique to quantum networks, which call for the development of new routing techniques. As an example, we present two simple hierarchical routing schemes for a quantum network of N nodes for a ring and sphere topology. For these topologies we present efficient routing algorithms requiring O(log N) qubits to be stored at each network node, O(polylog N) time and space to perform routing decisions, and O(log N) timesteps to replenish the virtual quantum links in a model of entanglement generation.</p>
+            <div class="row">
+        <div class="offset-md-1 col-md-11">
+          <p>A quantum network promises to enable long distance quantum communication, and assemble small quantum devices into a large quantum computing cluster. Each network node can thereby be seen as a small few qubit quantum computer. Qubits can be sent over direct physical links connecting nearby quantum nodes, or by means of teleportation over pre-established entanglement amongst distant network nodes. Such pre-shared entanglement effectively forms a shortcut - a virtual quantum link - which can be used exactly once.</p>
+          <p>Here, we present an abstraction of a quantum network that allows ideas from computer science to be applied to the problem of routing qubits, and manage entanglement in the network. Specifically, we consider a scenario in which each quantum network node can create EPR pairs with its immediate neighbours over a physical connection, and perform entanglement swapping operations in order to create long distance virtual quantum links. We proceed to discuss the features unique to quantum networks, which call for the development of new routing techniques. As an example, we present two simple hierarchical routing schemes for a quantum network of N nodes for a ring and sphere topology. For these topologies we present efficient routing algorithms requiring O(log N) qubits to be stored at each network node, O(polylog N) time and space to perform routing decisions, and O(log N) timesteps to replenish the virtual quantum links in a model of entanglement generation.</p>
+        </div>
+      </div>
     </div>
       <div class="job-entry ">
       <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">
                     2016
                   </h5></div>
-        <div class="col-md-9"><h3>Shortcuts to Quantum Network Routing
-        </h3></div>
+        <div class="col-md-8"><h3>Shortcuts to Quantum Network Routing</h3></div>
       </div>
       <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted">E. Schoute</h4></div>
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted">E. Schoute</h4></div>
       </div>
             <div class="row">
-        <div class="offset-md-3 col-md-9"><p class="small"><a href="http://resolver.tudelft.nl/uuid:684bb201-64a2-461d-b603-1f47590a1341">http://resolver.tudelft.nl/uuid:684bb201-64a2-461d-b603-1f47590a1341</a></p></div>
+        <div class="offset-md-4 col-md-8"><p class="small"><a href="http://resolver.tudelft.nl/uuid:684bb201-64a2-461d-b603-1f47590a1341">http://resolver.tudelft.nl/uuid:684bb201-64a2-461d-b603-1f47590a1341</a></p></div>
       </div>
-            <p>Master’s thesis.</p>
+            <div class="row">
+        <div class="offset-md-1 col-md-11">
+          <p>Master’s thesis.</p>
+        </div>
+      </div>
     </div>
       <div class="job-entry ">
       <div class="row">
-        <div class="col-md-3"><h5 class="text-muted">
+        <div class="offset-md-1 col-md-3"><h5 class="text-muted">
                     2013
                   </h5></div>
-        <div class="col-md-9"><h3>Systematic Testing of Hardware Compilers: Testing the DWARV C-to-VHDL Compiler
-        </h3></div>
+        <div class="col-md-8"><h3>Systematic Testing of Hardware Compilers: Testing the DWARV C-to-VHDL Compiler</h3></div>
       </div>
       <div class="row">
-        <div class="offset-md-3 col-md-9"><h4 class="text-muted">A. J. Rouvoet, E. Schoute, and A. B. Booij</h4></div>
+        <div class="offset-md-4 col-md-8"><h4 class="text-muted">A. J. Rouvoet, E. Schoute, and A. B. Booij</h4></div>
       </div>
-            <p>Bachelor’s thesis.</p>
+            <div class="row">
+        <div class="offset-md-1 col-md-11">
+          <p>Bachelor’s thesis.</p>
+        </div>
+      </div>
     </div>
-    </div>
+  
 </section>
 
 
